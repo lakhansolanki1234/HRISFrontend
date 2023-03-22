@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import APIconfig1 from '../apiConfig';
 import {
   Table,
   TableBody,
@@ -21,17 +22,28 @@ const useStyles = makeStyles({
 });
 
 const TimeKeep = () => {
+  const url=APIconfig1.apiEndpoint1;
+  console.log(url);
   const [fieldValue, setFieldValue] = useState('');
   // const [modalOpen, setModalOpen] = useState(false);
   const [addModalOpen, setAddModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
+  const [inputValue2, setInputValue2] = useState('');
   const [addModalOpen1, setAddModalOpen1] = useState(false);
   const [inputValue1, setInputValue1] = useState('');
+  const [inputValue3, setInputValue3] = useState('');
   const handleChangeInputValue = (event) => {
     setInputValue(event.target.value);
   };
+  const handleChangeInputValue2 = (event) => {
+    setInputValue2(event.target.value);
+  };
   const handleChangeInputValue1 = (event) => {
     setInputValue1(event.target.value);
+  };
+
+  const handleChangeInputValue3 = (event) => {
+    setInputValue3(event.target.value);
   };
 
   const handleCloseAddModal = () => {
@@ -65,7 +77,7 @@ const [isEditing, setIsEditing] = useState(false);
   const handleAddColumn = async () => {
     if (newColumnName) {
       try {
-        const response = await fetch('https://16e4-103-165-30-2.in.ngrok.io/add-column-sql', {
+        const response = await fetch(`${url}/add-column-sql`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',  "Access-Control-Allow-Origin": "*",
@@ -86,15 +98,16 @@ const [isEditing, setIsEditing] = useState(false);
   
   const handlesubmit = async () => {
     try {
-      const response = await fetch('https://16e4-103-165-30-2.in.ngrok.io/add_employee', {
+      const response = await fetch(`${url}/add_employee`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({
-          Empname: "asd",
-          new_column: "some asd"
+          EMPName:inputValue,
+          EmpContact:inputValue1,
+          EmpAddress:inputValue2,
         })
       });
       console.log(response.data);
@@ -121,7 +134,7 @@ const [isEditing, setIsEditing] = useState(false);
   
   const handleRowUpdate = async (index) => {
     try {
-      const response = await axios.put(`https://16e4-103-165-30-2.in.ngrok.io/update_employee/${data[index].id}`, rowData);
+      const response = await axios.put(`${url}/update_employee/${data[index].id}`, rowData);
       setData(data.map((row, i) => (i === index ? rowData : row)));
       setIsEditing(false);
       setRowData({});
@@ -133,7 +146,7 @@ const [isEditing, setIsEditing] = useState(false);
   
   const handleDelete = async (index) => {
     try {
-      const response = await axios.delete(`https://16e4-103-165-30-2.in.ngrok.io/delete_employee/${data[index].id}`);
+      const response = await axios.delete(`${url}/${data[index].id}`);
       setData(data.filter((row, i) => i !== index));
       setSelectedRow(null);
     } catch (error) {
@@ -159,11 +172,11 @@ const [isEditing, setIsEditing] = useState(false);
           
         <Typography variant="h4" sx={{ mb: 3 }}>Time Keep</Typography>
           <Typography variant="h6" sx={{ mb: 3 }}>Emplyoee Name</Typography>
-          <TextField  label="Row value" variant="outlined" value={inputValue} onChange={handleChangeInputValue} sx={{ width: '100%', mb: 2 }} />
+          <TextField   variant="outlined"  onChange={handleChangeInputValue} sx={{ width: '100%', mb: 2 }} />
           <Typography variant="h6" sx={{ mb: 3 }}>Emplyoee Contact</Typography>
-          <TextField label="Row value" variant="outlined" value={inputValue} onChange={handleChangeInputValue} sx={{ width: '100%', mb: 2 }} />
+          <TextField  variant="outlined"  onChange={handleChangeInputValue1} sx={{ width: '100%', mb: 2 }} />
           <Typography variant="h6" sx={{ mb: 3 }}>Employee Address</Typography>
-          <TextField label="Row value" variant="outlined" value={inputValue} onChange={handleChangeInputValue} sx={{ width: '100%', mb: 2 }} />
+          <TextField  variant="outlined"  onChange={handleChangeInputValue2} sx={{ width: '100%', mb: 2 }} />
 <div></div>
 <div  style={{display: "flex", gap: "2rem",marginTop:"20px"}}> <Button variant="contained" color="primary" onClick={handlesubmit}>Save</Button>
           <Button variant="contained" color="secondary" onClick=
@@ -171,12 +184,6 @@ const [isEditing, setIsEditing] = useState(false);
          
         </Box>
       </Modal>
-     
-      {/* <ul>
-        {data.map((value, index) => (
-          <li key={index}>{value}</li>
-        ))}
-      </ul> */}
     </div>
    
       
@@ -184,9 +191,10 @@ const [isEditing, setIsEditing] = useState(false);
       <Modal open={addModalOpen1} >
         <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', bgcolor: 'background.paper', boxShadow: 24, p: 4, minWidth: 400 }}>
           <Typography variant="h6" sx={{ mb: 2 }}>Column Name </Typography>
-          <TextField label="Row value" variant="outlined" value={inputValue} onChange={handleChangeInputValue1} sx={{ width: '100%', mb: 2 }} />
+          <TextField   variant="outlined"  onChange={handleChangeInputValue3} sx={{ width: '100%', mb: 2 }} />
           <div></div>
-          <div  style={{display: "flex", gap: "2rem",marginTop:"20px"}}> <Button variant="contained" color="primary">Save</Button>
+          <div  style={{display: "flex", gap: "2rem",marginTop:"20px"}}>
+            <Button variant="contained" color="primary" >Save</Button>
           <Button variant="contained" color="secondary" onClick=
           {handleCloseAddModal1}>Cancle</Button></div>
          

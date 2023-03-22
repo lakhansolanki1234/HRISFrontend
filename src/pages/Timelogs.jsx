@@ -23,7 +23,10 @@ function Timelogs(){
     const [value, setValue] = React.useState(oneMonthAgo);
     const [value1, setValue1] = React.useState(currentDate);
   const[name,setname]=useState();
-
+  const[selecteddata,setselecteddata]=useState(null);
+  const handletable = () => {
+   setselecteddata(1)
+  };
 
     return( 
         <div style={{marginLeft:"400px"}}>
@@ -77,10 +80,14 @@ function Timelogs(){
                   variant="contained"
                   size="large"
                   color="error"
+                  onClick={handletable}
                 >
                   Process
                 </Button>
-                <Timelogtable/>
+               
+                {selecteddata && (
+          <Timelogtable />
+        )}
   </div>
   );
 }
