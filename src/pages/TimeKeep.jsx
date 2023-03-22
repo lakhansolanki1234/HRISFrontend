@@ -75,7 +75,7 @@ const [isEditing, setIsEditing] = useState(false);
   const [newColumnName, setNewColumnName] = useState('');
 
   const handleAddColumn = async () => {
-    if (newColumnName) {
+  
       try {
         const response = await fetch(`${url}/add-column-sql`, {
           method: 'POST',
@@ -92,7 +92,8 @@ const [isEditing, setIsEditing] = useState(false);
       } catch (error) {
         console.error(error);
       }
-    }
+    
+    
   };
   console.log (typeof newColumnName);
   
@@ -194,7 +195,7 @@ const [isEditing, setIsEditing] = useState(false);
           <TextField   variant="outlined"  onChange={handleChangeInputValue3} sx={{ width: '100%', mb: 2 }} />
           <div></div>
           <div  style={{display: "flex", gap: "2rem",marginTop:"20px"}}>
-            <Button variant="contained" color="primary" >Save</Button>
+            <Button variant="contained" color="primary" onClick={handleAddColumn} >Save</Button>
           <Button variant="contained" color="secondary" onClick=
           {handleCloseAddModal1}>Cancle</Button></div>
          
