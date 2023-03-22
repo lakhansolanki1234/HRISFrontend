@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35.411" height="33.436" viewBox="0 0 35.411 33.436">
+  <defs>
+    <filter id="Path_2" x="0" y="0" width="35.411" height="13.647" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_3" x="0" y="19.789" width="35.411" height="13.647" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_4" x="0" y="9.483" width="35.411" height="13.647" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="_375a5d27deac257fd9bde7ba06ac27d0" data-name="375a5d27deac257fd9bde7ba06ac27d0" transform="translate(5 5)">
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Path_2)">
+      <path id="Path_2-2" data-name="Path 2" d="M8.4,14.647H30.347a.829.829,0,0,0,0-1.647H8.4a.829.829,0,0,0,0,1.647Z" transform="translate(-2.67 -8)" fill="#231f20"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Path_3)">
+      <path id="Path_3-2" data-name="Path 3" d="M8.4,36.647H30.347a.829.829,0,0,0,0-1.647H8.4a.829.829,0,0,0,0,1.647Z" transform="translate(-2.67 -10.21)" fill="#231f20"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Path_4)">
+      <path id="Path_4-2" data-name="Path 4" d="M8.4,25.647H30.347a.829.829,0,0,0,0-1.647H8.4a.829.829,0,0,0,0,1.647Z" transform="translate(-2.67 -9.52)" fill="#231f20"/>
+    </g>
+  </g>
+</svg>

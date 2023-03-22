@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36.314" height="37.596" viewBox="0 0 36.314 37.596">
+  <defs>
+    <filter id="Ellipse_1" x="5.775" y="0" width="24.764" height="24.764" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.271"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_1" x="0" y="13.687" width="36.314" height="23.909" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur-2"/>
+      <feFlood flood-opacity="0.271"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="d17af3d5a090bb32af36942c17c7fe03" transform="translate(5 5)">
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Ellipse_1)">
+      <ellipse id="Ellipse_1-2" data-name="Ellipse 1" cx="5.563" cy="5.563" rx="5.563" ry="5.563" transform="translate(10.77 6.78) rotate(-9.22)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Path_1)">
+      <path id="Path_1-2" data-name="Path 1" d="M.79,22.555a5.959,5.959,0,0,0,5.955,5.955h12.4a5.955,5.955,0,0,0,0-11.909H6.745A5.959,5.959,0,0,0,.79,22.555Z" transform="translate(4.21 2.09)"/>
+    </g>
+  </g>
+</svg>

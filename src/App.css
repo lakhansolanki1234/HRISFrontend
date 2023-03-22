@@ -1,0 +1,191 @@
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+
+.sidebar {
+  box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+
+}
+.nav-item,
+.navbar {
+  z-index: 10000;
+}
+@media  screen and (max-width:800px) {
+  .sidebar{
+    z-index: 10000000;
+  }
+}
+
+.e-dlg-center-center, .e-quick-popup-wrapper.e-device{
+  z-index: 1000000 !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* color-picker style  */
+
+ #preview {
+  background: transparent
+    url('https://ej2.syncfusion.com/react/demos/src/color-picker/images/pen.png')
+    no-repeat;
+  display: inline-block;
+  height: 80px;
+  margin: 10px 0;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: #008000;
+}
+
+.e-input-group:not(.e-float-icon-left), .e-input-group.e-success:not(.e-float-icon-left), .e-input-group.e-warning:not(.e-float-icon-left), .e-input-group.e-error:not(.e-float-icon-left), .e-input-group.e-control-wrapper:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-success:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-warning:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left){
+  border: none;
+}
+@keyframes open {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes close {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.sdbar{
+    margin-left: 30px;
+    top:85px;
+    border-radius: 20px;
+    height: 85%;
+    transition: 1s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    width: 300px;
+}
+.sdbar.open {
+  animation-name: open;
+}
+
+.sdbar.close {
+  animation-name: close;
+}
+
+.sdclose{
+    width: 50px;
+    margin-left: 32px;
+    top:85px;
+    border-radius: 20px;
+    position: fixed;
+    height:85%;
+   
+}
+.sidebaroff{
+  background-color: aqua;
+  z-index: 2000;
+  
+}
+.iconside{
+  background: #0646B0;
+  border-radius: 20px;
+  margin-bottom: 400px;
+  max-height: 100%;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.menuicons{
+color:white;
+}
+
+.hrislogo{
+  width: 140px;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom:20px;
+  padding-right: 6px;
+  margin-right: 17px;
+  
+}
+.navbutt{
+  background-color: #45af45;
+  height: 40px;
+  width: 200px;
+  color: aliceblue;
+  position: absolute;
+  right: 200px;
+}
+
+.messicon{
+  position: absolute;
+  right:135px;
+  top:29px;
+  width: 2.4%;
+  
+}
+.useicon{
+  position:absolute;
+  right: 75px;
+  top:28px;
+  width: 2.3%;
+}
+.menunav{
+  position: absolute;
+  right: 20px;
+  top:31px;
+  width: 2.1%;
+}
+.sideofful li .sidebarofflist{
+  padding-top:13px;
+  padding-bottom: 13px;
+
+}
+.userpro{
+  position: absolute;
+  bottom:10px;
+  width: 80%;
+  margin-left: -4.7px;
+}
+.fbedit{
+  width: 70%;
+  margin-left: 25%;
+  box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 15px;
+  margin-bottom: 50px;
+ 
+}
+.iconsoffbar1{
+  color:#0e3067;
+  font-size: 25px;
+  margin-top: 23px;
+  margin-left: 2px;
+
+}
+.navtext{
+  margin-left: 60px;
+  font-size: 30px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+
+}
+.navsubtext{
+  margin-left: 75px;
+  
+  padding-bottom: 20px;
+  color:grey;
+}
