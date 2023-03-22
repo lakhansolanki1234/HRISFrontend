@@ -71,7 +71,7 @@ const [isEditing, setIsEditing] = useState(false);
 
   const classes = useStyles();
   const [data,setData]=useState([]);
-  const [columns, setColumns] = useState(['Name', 'Age', 'Salary']);
+  const [columns, setColumns] = useState(['EMPName', 'EMPContact', 'EMPAddress']);
   const [newColumnName, setNewColumnName] = useState('');
 
   const handleAddColumn = async () => {
@@ -202,7 +202,8 @@ const [isEditing, setIsEditing] = useState(false);
       </Modal>
       </div>
       </div>
-      <TableContainer component={Paper}>
+
+      <TableContainer component={Paper} style={{marginTop:"20px"}}>
         <Table className={classes.table} aria-label="example table">
           <TableHead>
             <TableRow>

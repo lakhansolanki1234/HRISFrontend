@@ -2,6 +2,7 @@ import React from 'react';
 import { FormControl, InputLabel, Select, MenuItem, Button } from '@material-ui/core';
 
 function Formula() {
+  
   const [schedules, setSchedules] = React.useState([{ scheduleTime: '', operation: '', scheduleTimeOut: '' }]);
 
   const handleScheduleTimeChange = (event, index) => {
@@ -49,7 +50,7 @@ function Formula() {
       onChange={(event) => handleScheduleTimeChange(event, index)}
     >
       <MenuItem value="">
-        <em>None</em>
+      
       </MenuItem>
       <MenuItem value={1}>1 PM</MenuItem>
       <MenuItem value={2}>2 PM</MenuItem>
@@ -67,7 +68,7 @@ function Formula() {
       onChange={(event) => handleOperationChange(event, index)}
     >
       <MenuItem value="">
-        <em>None</em>
+    
       </MenuItem>
       <MenuItem value={'add'}>Add</MenuItem>
       <MenuItem value={'subtract'}>Subtract</MenuItem>
@@ -84,7 +85,7 @@ function Formula() {
       onChange={(event) => handleScheduleTimeOutChange(event, index)}
     >
       <MenuItem value="">
-        <em>None</em>
+    
       </MenuItem>
       <MenuItem value={6}>6 PM</MenuItem>
       <MenuItem value={7}>7 PM</MenuItem>

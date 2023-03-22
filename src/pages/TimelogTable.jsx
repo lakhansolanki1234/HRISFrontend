@@ -145,9 +145,8 @@ const [isEditing, setIsEditing] = useState(false);
 
   return (
     <div style={{marginTop:"60px"}}>
-      <div >
-  <div  style={{display: "flex", gap: "3rem"}}>
-      <Button variant="contained"  color="primary" onClick={handleAddRow}>
+     
+      {/* <Button variant="contained"  color="primary" onClick={handleAddRow}>
         Add Row
       </Button>
       <Button variant="contained" color="primary" onClick={handleAddRow1}>
@@ -177,23 +176,10 @@ const [isEditing, setIsEditing] = useState(false);
           <li key={index}>{value}</li>
         ))}
       </ul> */}
-    </div>
+
    
       
    
-      <Modal open={addModalOpen1} >
-        <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', bgcolor: 'background.paper', boxShadow: 24, p: 4, minWidth: 400 }}>
-          <Typography variant="h6" sx={{ mb: 2 }}>Column Name </Typography>
-          <TextField label="Row value" variant="outlined" value={inputValue} onChange={handleChangeInputValue1} sx={{ width: '100%', mb: 2 }} />
-          <div></div>
-          <div  style={{display: "flex", gap: "2rem",marginTop:"20px"}}> <Button variant="contained" color="primary">Save</Button>
-          <Button variant="contained" color="secondary" onClick=
-          {handleCloseAddModal1}>Cancle</Button></div>
-         
-        </Box>
-      </Modal>
-      </div>
-      </div>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="example table">
           <TableHead>
